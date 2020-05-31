@@ -68,3 +68,8 @@ require get_template_directory() . '/inc/template-tags.php';
 
 // Custom template functions
 require get_template_directory() . '/inc/template-functions.php';
+
+//Woocommerce compatibility file
+if ( class_exists( 'WooCommerce' ) ) {
+	require get_template_directory() . '/inc/woocommerce.php';
+}
