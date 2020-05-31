@@ -1,12 +1,26 @@
 <?php
+/**
+ * Jetpack Compatibility File
+ *
+ * @link https://jetpack.com/
+ *
+ * @package bentheme
+ */
 
-function marine_nina_jetpack_setup() {
+/**
+ * Jetpack setup function.
+ *
+ * See: https://jetpack.com/support/infinite-scroll/
+ * See: https://jetpack.com/support/responsive-videos/
+ * See: https://jetpack.com/support/content-options/
+ */
+function bentheme_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support(
 		'infinite-scroll',
 		array(
 			'container' => 'main',
-			'render'    => 'marine_nina_infinite_scroll_render',
+			'render'    => 'bentheme_infinite_scroll_render',
 			'footer'    => 'page',
 		)
 	);
@@ -19,7 +33,7 @@ function marine_nina_jetpack_setup() {
 		'jetpack-content-options',
 		array(
 			'post-details' => array(
-				'stylesheet' => 'marine_nina-style',
+				'stylesheet' => 'bentheme-style',
 				'date'       => '.posted-on',
 				'categories' => '.cat-links',
 				'tags'       => '.tags-links',
@@ -34,12 +48,12 @@ function marine_nina_jetpack_setup() {
 		)
 	);
 }
-add_action( 'after_setup_theme', 'marine_nina_jetpack_setup' );
+add_action( 'after_setup_theme', 'bentheme_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function marine_nina_infinite_scroll_render() {
+function bentheme_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :
