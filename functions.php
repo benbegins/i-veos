@@ -1,7 +1,7 @@
 <?php
 
 // Configure les fonctionnalités de bases
-function bentheme_setup(){
+function iveos_setup(){
 
     // Prise en charge des images de mise en avant
     add_theme_support('post-thumbnails');
@@ -26,15 +26,15 @@ function bentheme_setup(){
     ) );
 
 }
-add_action( 'after_setup_theme', 'bentheme_setup' );
+add_action( 'after_setup_theme', 'iveos_setup' );
 
 
 // Ajout des scripts
-function bentheme_register_assets(){
+function iveos_register_assets(){
 
     // CSS
     wp_enqueue_style( 
-        'bentheme', 
+        'iveos', 
         get_stylesheet_uri( ),
         array(),
         '1.0'
@@ -42,7 +42,7 @@ function bentheme_register_assets(){
 
     // JS
     wp_enqueue_script( 
-        'bentheme', 
+        'iveos', 
         get_template_directory_uri() . '/public/bundle.js', 
         array(),
         '1.0',
@@ -50,7 +50,7 @@ function bentheme_register_assets(){
     );
 
 }
-add_action( 'wp_enqueue_scripts', 'bentheme_register_assets');
+add_action( 'wp_enqueue_scripts', 'iveos_register_assets');
 
 
 // Fichier de compatibilite Jetpack
@@ -58,18 +58,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
-// Woocommerce compatibilité
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
-
 // Custom template tags
 require get_template_directory() . '/inc/template-tags.php';
 
 // Custom template functions
 require get_template_directory() . '/inc/template-functions.php';
-
-//Woocommerce compatibility file
-if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce.php';
-}
