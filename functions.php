@@ -34,9 +34,16 @@ function iveos_register_assets(){
 
     // CSS
     wp_enqueue_style( 
+        'iveos_fonts', 
+        'https://use.typekit.net/lsr1bzs.css',
+        array(),
+        '1.0'
+    );
+
+    wp_enqueue_style( 
         'iveos', 
         get_stylesheet_uri( ),
-        array(),
+        array('iveos_fonts'),
         '1.0'
     );
 
