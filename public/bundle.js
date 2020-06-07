@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ../sass/style.scss */ \"./assets/sass/style.scss\");\n\n//# sourceURL=webpack:///./assets/js/app.js?");
+eval("__webpack_require__(/*! ../sass/style.scss */ \"./assets/sass/style.scss\"); //MENU MOBILE\n//Selectors\n\n\nconst burger = document.querySelector(\".site-header__burger\");\nconst menu = document.querySelector(\".site-header__navigation\"); //Events\n\nburger.addEventListener(\"click\", toggleMenu); //Functions\n\nfunction toggleMenu() {\n  menu.classList.toggle(\"active\");\n  burger.classList.toggle(\"active\");\n}\n\n//# sourceURL=webpack:///./assets/js/app.js?");
 
 /***/ }),
 

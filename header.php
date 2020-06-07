@@ -12,14 +12,26 @@
 
 <div id="page" class="site">
 
-    <header class="site_header">
-    <?php 
+    <header class="site-header">
+        <div class="site-header__logo">
+            <a href="<?php echo get_site_url(); ?>">
+                <img src="<?php echo get_template_directory_uri() . '/public/img/logo-iveos.png' ?>" 
+                alt="Logo iveos" 
+                srcset="<?php echo get_template_directory_uri() . '/public/img/logo-iveos@2x.png' ?> 2x">
+            </a>
+        </div>
+        <div class="site-header__burger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+        <?php 
         wp_nav_menu( 
             array( 
                 'theme_location' => 'main', 
                 'container' => 'ul',
-                'menu_class' => 'site_header-menu',
+                'menu_class' => 'site-header__navigation',
             ) 
         ); 
-    ?>
+        ?>
     </header>

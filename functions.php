@@ -25,6 +25,11 @@ function iveos_setup(){
         'main' => 'Menu Principal',
     ) );
 
+    if ( function_exists( 'add_image_size' ) ) { 
+        add_image_size( 'fullwidth-size', 1600, 1000, true );
+        add_image_size( 'phone-size', 380, 380, true );
+    }
+
 }
 add_action( 'after_setup_theme', 'iveos_setup' );
 

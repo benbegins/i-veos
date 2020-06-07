@@ -1,0 +1,145 @@
+.site-footer {
+	position: relative;
+	padding-top: 100px;
+	padding-bottom: 30px;
+
+	&__colors {
+		background-color: $iveos-green;
+		color: white;
+	}
+
+	&__wrap-content {
+		display: grid;
+		grid-template-columns: repeat(2, 50%);
+
+		@media screen and (min-width: 481px) {
+			grid-template-columns: 5fr 4fr 3fr;
+		}
+	}
+
+	&__part {
+		margin: 40px 0;
+	}
+
+	&__title {
+		font-size: 2.5rem;
+		font-weight: 800;
+		text-transform: uppercase;
+		line-height: 1.2;
+		max-width: 75%;
+		margin: 40px 0;
+
+		@media screen and (min-width: 993px) {
+			font-size: 3rem;
+		}
+	}
+
+	&__coordonnees {
+		grid-column: 1/3;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		@media screen and (min-width: 481px) {
+			grid-column: 1;
+			grid-template-columns: 1fr;
+		}
+
+		&-adresse {
+			margin-right: 40px;
+		}
+	}
+
+	&__coordonnees-title {
+		font-size: 1.3rem;
+		opacity: 0.5;
+		font-weight: 700;
+	}
+
+	&__coordonnees-content {
+		font-size: 1.4rem;
+		font-weight: 300;
+		line-height: 1.6;
+
+		@media screen and (min-width: 993px) {
+			font-size: 2.2rem;
+			margin-bottom: 40px;
+		}
+	}
+
+	&__navigation {
+		a {
+			display: inline-block;
+			font-size: 1.2rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			color: white;
+			padding: 15px 0;
+
+			@media screen and (min-width: 993px) {
+				font-size: 1.3rem;
+				padding: 20px 0;
+			}
+		}
+		a:hover {
+			color: $iveos-dark;
+		}
+	}
+
+	&__social {
+		position: relative;
+		z-index: 1;
+		justify-self: center;
+
+		.icon-social {
+			display: inline-block;
+			padding: 15px 0;
+			svg {
+				width: 15px;
+			}
+		}
+	}
+
+	&__mentions-text {
+		font-size: 1.2rem;
+		font-weight: 700;
+		opacity: 0.5;
+
+		a {
+			color: white;
+		}
+		a:hover {
+			color: $iveos-dark;
+		}
+	}
+
+	&__background-right {
+		@media screen and (min-width: 993px) {
+			position: absolute;
+			z-index: 0;
+			top: 0;
+			right: 0;
+			width: calc(25% + 15px);
+			height: 100%;
+			background-color: $iveos-dark;
+		}
+		@media screen and (min-width: $site-size) {
+			width: calc(50% - 400px);
+		}
+	}
+
+	&::before {
+		@media screen and (min-width: 993px) {
+			content: "";
+			display: block;
+			position: absolute;
+			background-color: $iveos-green;
+			height: 50px;
+			left: 0;
+			top: -50px;
+			width: calc(75% - 15px);
+		}
+		@media screen and (min-width: $site-size) {
+			width: calc(50% + 400px);
+		}
+	}
+}

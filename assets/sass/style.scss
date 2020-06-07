@@ -48,5 +48,7 @@ Version: 1.0
 @import "_library/responsive"; // Responsive Web Design helpers
 @import "_library/wordpress"; // WordPress reset and basic styles
 @import "_library/grillade-grid"; // grid system with Grid Layout
-
+@import "_library/global";
 // Components
+@import "_components/header";
+@import "_components/footer";

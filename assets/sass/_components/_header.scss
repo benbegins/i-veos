@@ -1,0 +1,150 @@
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	position: absolute;
+	z-index: 10;
+	width: 100%;
+
+	@media screen and (min-width: 993px) {
+		align-items: center;
+		max-width: 1660px;
+		padding: 20px 30px;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	&__logo {
+		position: relative;
+		z-index: 11;
+
+		img {
+			width: 100px;
+			margin-left: 30px;
+
+			@media screen and (min-width: 993px) {
+				width: 149px;
+				margin-left: 0;
+			}
+		}
+	}
+
+	&__navigation {
+		position: fixed;
+		background-color: $iveos-green;
+		z-index: 10;
+		width: 100%;
+		height: 100vh;
+		left: 100%;
+		top: 0;
+		padding: 65px 0 0 20%;
+		margin: 0;
+		transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-direction: column;
+
+		@media screen and (min-width: 993px) {
+			position: static;
+			background: none;
+			width: auto;
+			height: auto;
+			padding: 0;
+			flex-direction: row;
+			align-items: center;
+		}
+
+		&.active {
+			transform: translateX(-100%);
+
+			a {
+				transform: translateX(0);
+				opacity: 1;
+			}
+		}
+
+		a {
+			display: block;
+			color: white;
+			text-transform: uppercase;
+			letter-spacing: 0.02em;
+			font-size: 1.3rem;
+			font-weight: 700;
+			padding: 5vh 0;
+			transform: translateX(100px);
+			opacity: 0;
+			transition: 0.6s 0.5s ease;
+
+			@media screen and (min-width: 993px) {
+				opacity: 1;
+				transform: none;
+				padding: 0 30px;
+				transition: 0.25s;
+
+				&:hover {
+					color: $iveos-green;
+				}
+			}
+		}
+
+		li:last-child a {
+			@media screen and (min-width: 993px) {
+				background-color: $iveos-green;
+				color: white;
+				padding: 20px 40px;
+				border-radius: 50px;
+
+				&:hover {
+					background-color: $iveos-green-2;
+				}
+			}
+		}
+	}
+
+	&__burger {
+		background: $iveos-green;
+		width: 65px;
+		height: 65px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		z-index: 11;
+		transition: background 0.3s;
+
+		@media screen and (min-width: 993px) {
+			display: none;
+		}
+
+		.line {
+			width: 30px;
+			height: 2px;
+			background-color: white;
+			margin: 3px 0;
+			position: relative;
+			z-index: 11;
+			transition: 0.5s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+		.line.line3 {
+			width: 20px;
+			margin-left: 10px;
+		}
+
+		&.active {
+			background: $iveos-green-2;
+
+			.line1 {
+				transform: rotate(45deg) translate(6px, 6px);
+			}
+			.line2 {
+				transform: rotate(-45deg);
+			}
+			.line3 {
+				transform: scaleX(0);
+			}
+		}
+	}
+}
