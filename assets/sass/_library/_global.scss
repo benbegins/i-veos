@@ -1,4 +1,37 @@
+$phone-size: 481px;
+$tab-size: 769px;
+$laptop-size: 1025px;
 $site-size: 1660px;
+
+%shape-pattern-large {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	background: url(./public/img/shape-pattern-large.svg) center center no-repeat;
+	width: 335px;
+	height: 430px;
+	pointer-events: none;
+	transform: scale(0.7);
+	@media screen and (min-width: $tab-size) {
+		transform: scale(1);
+	}
+}
+
+%shape-pattern-small {
+	content: "";
+	display: block;
+	position: absolute;
+	z-index: 1;
+	background: url(./public/img/shape-pattern-small.svg) center center no-repeat;
+	width: 115px;
+	height: 145px;
+	pointer-events: none;
+	transform: scale(0.7);
+	@media screen and (min-width: $tab-size) {
+		transform: scale(1);
+	}
+}
 
 .wrap-contain {
 	width: 100%;
@@ -7,4 +40,158 @@ $site-size: 1660px;
 	padding-right: 30px;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.btn-primary {
+	display: inline-block;
+	background-color: $iveos-green;
+	color: white;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	font-weight: $weight-bold;
+	font-size: 1.2rem;
+	border-radius: 50px;
+	box-shadow: 0 10px 20px rgba(2, 128, 144, 0.2);
+	transition: 0.2s;
+
+	@media screen and (min-width: $phone-size) {
+		font-size: 1.3rem;
+		padding: 20px 50px;
+	}
+
+	&:hover {
+		background-color: $iveos-green-2;
+		color: white;
+	}
+}
+
+.btn-secondary {
+	display: inline-block;
+	border: 1px solid white;
+	color: white;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	font-weight: $weight-bold;
+	font-size: 1.2rem;
+	border-radius: 50px;
+	transition: 0.2s;
+
+	@media screen and (min-width: $phone-size) {
+		font-size: 1.3rem;
+		padding: 20px 50px;
+	}
+
+	&:hover {
+		background-color: $iveos-green-2;
+		color: white;
+	}
+}
+
+.text-link {
+	color: $iveos-orange;
+	display: inline-block;
+	border-bottom: 3px solid $iveos-orange;
+	font-size: 1.2rem;
+	text-transform: uppercase;
+	font-weight: $weight-bold;
+
+	@media screen and (min-width: $tab-size) {
+		font-size: 1.4rem;
+	}
+}
+
+.background-dark-pattern {
+	background: $iveos-dark url(./public/img/pattern.png) top left repeat fixed;
+
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		background: radial-gradient(
+			ellipse at center,
+			rgba(22, 44, 50, 0) 0%,
+			rgba(22, 44, 50, 0) 1%,
+			rgba(22, 44, 50, 1) 100%
+		);
+	}
+}
+
+.back-green-1 {
+	background-color: $iveos-green;
+}
+.back-green-2 {
+	background-color: $iveos-green-2;
+}
+.back-green-3 {
+	background-color: $iveos-green-3;
+}
+
+.upper-xbold {
+	text-transform: uppercase;
+	font-weight: $weight-xbold;
+}
+
+.vert-lines {
+	position: fixed;
+	z-index: -1;
+	width: calc(100% - 60px);
+	height: 100%;
+	top: 0;
+	left: 0;
+	margin: 0 30px;
+
+	@media screen and (min-width: $site-size) {
+		width: $site-size;
+		left: 50%;
+		transform: translateX(-50%);
+		margin: 0;
+	}
+
+	.line {
+		position: absolute;
+		width: 1px;
+		height: 100%;
+		background-color: #f2f2f2;
+	}
+
+	.line1 {
+		left: 0;
+	}
+	.line2 {
+		display: none;
+		@media screen and (min-width: $phone-size) {
+			display: block;
+			left: 25%;
+		}
+	}
+	.line3 {
+		left: 50%;
+	}
+	.line4 {
+		display: none;
+		@media screen and (min-width: $phone-size) {
+			display: block;
+			left: 75%;
+		}
+	}
+	.line5 {
+		left: 100%;
+	}
+}
+
+.bloc-separation {
+	position: absolute;
+	right: 30px;
+	height: 20px;
+	width: calc(50% - 30px);
+	background-color: $iveos-dark;
+
+	@media screen and (min-width: $tab-size) {
+		width: 50%;
+		right: 0;
+		height: 35px;
+	}
 }

@@ -1,0 +1,125 @@
+.site-hero {
+	position: relative;
+	background-color: white;
+
+	&__background {
+		position: absolute;
+		width: 40%;
+		height: 100%;
+		left: 0;
+		top: 0;
+
+		@media screen and (min-width: $phone-size) {
+			width: 35%;
+		}
+
+		@media screen and (min-width: $site-size) {
+			width: calc(50% - 250px);
+		}
+	}
+
+	&__image-container {
+		position: absolute;
+		width: 85%;
+		height: calc(100% - 7vh);
+		right: 0;
+		top: 0;
+
+		&::after {
+			content: "";
+			background-color: $iveos-green;
+			display: block;
+			position: absolute;
+			top: 100%;
+			right: 0;
+			height: 3.5vh;
+			min-height: 30px;
+			width: 85%;
+		}
+
+		@media screen and (min-width: $phone-size) {
+			width: 80%;
+			&::after {
+				width: 95%;
+			}
+		}
+		@media screen and (min-width: $site-size) {
+			width: calc(50% + 500px);
+		}
+	}
+
+	&__image {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: relative;
+	}
+
+	&__image-overlay {
+		background-color: black;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0.25;
+
+		@media screen and (min-width: $phone-size) {
+			opacity: 0;
+		}
+	}
+
+	&__title-container {
+		position: relative;
+		z-index: 1;
+		padding: 25vh 30px;
+
+		@media screen and (min-width: $phone-size) {
+			padding-left: 12%;
+			padding-right: 18%;
+		}
+
+		@media screen and (min-width: $laptop-size) {
+			padding-top: 20%;
+			padding-bottom: 20%;
+			padding-right: 25%;
+		}
+
+		@media screen and (min-width: $site-size) {
+			padding-left: 200px;
+			padding-right: 500px;
+			padding-top: 330px;
+			padding-bottom: 330px;
+		}
+	}
+
+	&__title {
+		color: white;
+		text-transform: uppercase;
+		font-size: 4rem;
+		font-weight: $weight-xbold;
+		line-height: 1;
+
+		@media screen and (min-width: $phone-size) {
+			font-size: 5rem;
+		}
+
+		@media screen and (min-width: $laptop-size) {
+			font-size: 6vw;
+		}
+		@media screen and (min-width: $site-size) {
+			font-size: 10rem;
+		}
+	}
+
+	&__baseline {
+		color: white;
+		font-size: 2.5rem;
+		font-weight: $weight-light;
+		line-height: 1.2;
+
+		@media screen and (min-width: $laptop-size) {
+			font-size: 3rem;
+		}
+	}
+}

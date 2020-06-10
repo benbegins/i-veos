@@ -67,11 +67,12 @@ $headings-margin-bottom: $margin-bottom-base / 2 !default;
 $paragraph-margin-bottom: $margin-bottom-base !default;
 
 // Font weights
-$weight-light: 200 !default;
+$weight-light: 300 !default;
 $weight-book: 300 !default;
-$weight-regular: 400 !default;
+$weight-regular: 300 !default;
 $weight-medium: 500 !default;
 $weight-bold: 700 !default;
+$weight-xbold: 800 !default;
 
 // Activate hyphenation on small screens
 $hyphens: false !default;

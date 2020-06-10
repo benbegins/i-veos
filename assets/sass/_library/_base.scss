@@ -13,6 +13,8 @@
 /* switching to border-box model for all elements */
 html {
 	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 *,

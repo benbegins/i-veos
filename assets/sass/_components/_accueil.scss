@@ -1,0 +1,213 @@
+.services-iveos {
+	padding: 10rem 0;
+	background-color: white;
+	overflow: hidden;
+	@media screen and (min-width: $laptop-size) {
+		padding: 15rem 0;
+	}
+
+	&__item {
+		margin-bottom: 10rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		@media screen and (min-width: $phone-size) {
+			display: flex;
+		}
+	}
+
+	&__image-container {
+		position: relative;
+		padding-left: 32px;
+		@media screen and (min-width: $phone-size) {
+			width: 50%;
+		}
+		img {
+			position: relative;
+			@media screen and (min-width: $phone-size) {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		@media screen and (min-width: $laptop-size) {
+			width: 40%;
+			margin-right: 5%;
+			padding-left: 100px;
+		}
+	}
+
+	&__title {
+		position: absolute;
+		width: 100%;
+		text-align: right;
+		top: 0;
+		left: -100%;
+		transform: rotate(-90deg);
+		transform-origin: top right;
+		line-height: 1;
+		font-size: 2.5rem;
+		@media screen and (min-width: $laptop-size) {
+			font-size: 4rem;
+			transform: rotate(-90deg) translateY(55px);
+		}
+		@media screen and (min-width: $site-size) {
+			font-size: 5rem;
+			transform: rotate(-90deg) translateY(40px);
+		}
+	}
+
+	&__title-rappel {
+		font-size: 1.3rem;
+		font-weight: $weight-bold;
+		color: #ccc;
+	}
+
+	&__text-container {
+		margin-top: 5rem;
+		position: relative;
+		@media screen and (min-width: $phone-size) {
+			width: 50%;
+			padding: 0 5rem;
+		}
+		@media screen and (min-width: $laptop-size) {
+			width: 40%;
+			padding: 0 5%;
+			margin-top: 0;
+		}
+	}
+
+	&__text {
+		font-size: 1.8rem;
+		font-weight: $weight-light;
+		@media screen and (min-width: $tab-size) {
+			font-size: 2.2rem;
+		}
+	}
+
+	&__item-tierspayant {
+		.services-iveos__image-container::before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 0;
+			width: calc(100% - 32px);
+			height: 90%;
+			background-color: $iveos-green-3;
+			bottom: -15px;
+			right: -15px;
+			@media screen and (min-width: $laptop-size) {
+				width: calc(100% - 100px);
+				bottom: -30px;
+				right: -30px;
+			}
+		}
+		.services-iveos__text-container::before {
+			@extend %shape-pattern-large;
+			right: 0;
+			top: -10%;
+		}
+	}
+
+	&__item-conseil {
+		@media screen and (min-width: $phone-size) {
+			flex-direction: row-reverse;
+		}
+		@media screen and (min-width: $laptop-size) {
+			align-items: flex-end;
+			margin-top: -15rem;
+			margin-bottom: 15rem;
+		}
+		.services-iveos__image-container::before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 0;
+			width: 110%;
+			height: 90%;
+			background-color: $iveos-green-2;
+			bottom: -20px;
+			left: 32px;
+			@media screen and (min-width: $laptop-size) {
+				left: 100px;
+			}
+			@media screen and (min-width: $site-size) {
+				width: 200%;
+			}
+		}
+		.services-iveos__text-container::before {
+			@extend %shape-pattern-small;
+			left: 30px;
+			top: -50px;
+		}
+	}
+
+	&__item-informatique {
+		@media screen and (min-width: $laptop-size) {
+			align-items: center;
+		}
+		.services-iveos__image-container::before {
+			content: "";
+			display: block;
+			position: absolute;
+			z-index: 0;
+			width: 50%;
+			height: 170px;
+			background-color: $iveos-green;
+			bottom: 0;
+			left: -15px;
+			@media screen and (min-width: $laptop-size) {
+				left: 0;
+				height: 60%;
+			}
+		}
+		.services-iveos__text-container::before {
+			@extend %shape-pattern-large;
+			left: -100px;
+			top: 0;
+		}
+	}
+}
+
+.testimonial-home {
+	color: white;
+	margin-bottom: 15rem;
+	@media screen and (min-width: $tab-size) {
+		padding: 0 30px;
+		margin-bottom: 20rem;
+	}
+
+	&__list {
+		@media screen and (min-width: $tab-size) {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			align-items: start;
+			column-gap: 45px;
+		}
+	}
+
+	&__item {
+		padding: 40px 20px;
+		border-radius: 20px;
+		margin: 2rem 0;
+		box-shadow: 0 10px 30px rgba(5, 102, 141, 0.3);
+		@media screen and (min-width: $phone-size) {
+			padding: 40px 10%;
+		}
+	}
+
+	&__excerpt {
+		font-size: 2.5rem;
+		font-weight: $weight-bold;
+	}
+
+	&__auteur {
+		font-size: 2rem;
+		font-weight: $weight-bold;
+		margin-top: 3rem;
+	}
+
+	&__lieu {
+		font-size: 1.6rem;
+	}
+}

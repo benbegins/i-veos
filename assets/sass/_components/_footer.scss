@@ -1,7 +1,9 @@
 .site-footer {
 	position: relative;
-	padding-top: 100px;
-	padding-bottom: 30px;
+	padding: 10rem 0 30px;
+	@media screen and (min-width: $tab-size) {
+		padding: 10rem 30px 30px;
+	}
 
 	&__colors {
 		background-color: $iveos-green;
@@ -12,7 +14,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 50%);
 
-		@media screen and (min-width: 481px) {
+		@media screen and (min-width: $phone-size) {
 			grid-template-columns: 5fr 4fr 3fr;
 		}
 	}
@@ -23,13 +25,13 @@
 
 	&__title {
 		font-size: 2.5rem;
-		font-weight: 800;
+		font-weight: $weight-xbold;
 		text-transform: uppercase;
 		line-height: 1.2;
 		max-width: 75%;
-		margin: 40px 0;
+		margin: 0 0 40px 0;
 
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			font-size: 3rem;
 		}
 	}
@@ -39,7 +41,7 @@
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 
-		@media screen and (min-width: 481px) {
+		@media screen and (min-width: $phone-size) {
 			grid-column: 1;
 			grid-template-columns: 1fr;
 		}
@@ -52,15 +54,15 @@
 	&__coordonnees-title {
 		font-size: 1.3rem;
 		opacity: 0.5;
-		font-weight: 700;
+		font-weight: $weight-bold;
 	}
 
 	&__coordonnees-content {
 		font-size: 1.4rem;
-		font-weight: 300;
+		font-weight: $weight-light;
 		line-height: 1.6;
 
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			font-size: 2.2rem;
 			margin-bottom: 40px;
 		}
@@ -70,12 +72,12 @@
 		a {
 			display: inline-block;
 			font-size: 1.2rem;
-			font-weight: 700;
+			font-weight: $weight-bold;
 			text-transform: uppercase;
 			color: white;
 			padding: 15px 0;
 
-			@media screen and (min-width: 993px) {
+			@media screen and (min-width: $laptop-size) {
 				font-size: 1.3rem;
 				padding: 20px 0;
 			}
@@ -94,14 +96,22 @@
 			display: inline-block;
 			padding: 15px 0;
 			svg {
+				transition: 0.25s;
 				width: 15px;
+				fill: white;
+				@media screen and (min-width: $laptop-size) {
+					width: 20px;
+				}
+			}
+			svg:hover {
+				fill: $iveos-green;
 			}
 		}
 	}
 
 	&__mentions-text {
 		font-size: 1.2rem;
-		font-weight: 700;
+		font-weight: $weight-bold;
 		opacity: 0.5;
 
 		a {
@@ -113,7 +123,7 @@
 	}
 
 	&__background-right {
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			position: absolute;
 			z-index: 0;
 			top: 0;
@@ -128,7 +138,7 @@
 	}
 
 	&::before {
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			content: "";
 			display: block;
 			position: absolute;

@@ -38,9 +38,9 @@
                         <a href="#" class="icon-linkedin icon-white icon-social">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29.999">
                                 <g id="RS_linkedin" transform="translate(0 0)">
-                                    <rect id="Rectangle_11" data-name="Rectangle 11" width="6.192" height="19.999" transform="translate(0.593 10)" fill="#fff"/>
-                                    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="3.661" cy="3.689" rx="3.661" ry="3.689" transform="translate(0 0)" fill="#fff"/>
-                                    <path id="Tracé_3" data-name="Tracé 3" d="M32.321,31.278c0-2.789,1.3-4.484,3.773-4.484,2.273,0,3.368,1.611,3.368,4.484V41.773h6.179V29.109c0-5.355-3.033-7.95-7.28-7.95a6.974,6.974,0,0,0-6.039,3.305v-2.72H26.38V41.773h5.941Z" transform="translate(-15.641 -11.773)" fill="#fff"/>
+                                    <rect id="Rectangle_11" data-name="Rectangle 11" width="6.192" height="19.999" transform="translate(0.593 10)"/>
+                                    <ellipse id="Ellipse_6" data-name="Ellipse 6" cx="3.661" cy="3.689" rx="3.661" ry="3.689" transform="translate(0 0)"/>
+                                    <path id="Tracé_3" data-name="Tracé 3" d="M32.321,31.278c0-2.789,1.3-4.484,3.773-4.484,2.273,0,3.368,1.611,3.368,4.484V41.773h6.179V29.109c0-5.355-3.033-7.95-7.28-7.95a6.974,6.974,0,0,0-6.039,3.305v-2.72H26.38V41.773h5.941Z" transform="translate(-15.641 -11.773)"/>
                                 </g>
                             </svg>
                         </a>
@@ -54,6 +54,14 @@
     </div>
     <div class="site-footer__background-right"></div>
 </footer>
+
+<div class="vert-lines">
+    <div class="line line1"></div>
+    <div class="line line2"></div>
+    <div class="line line3"></div>
+    <div class="line line4"></div>
+    <div class="line line5"></div>
+</div>
 
 </div><!-- #page -->
 

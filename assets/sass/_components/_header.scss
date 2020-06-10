@@ -6,7 +6,7 @@
 	z-index: 10;
 	width: 100%;
 
-	@media screen and (min-width: 993px) {
+	@media screen and (min-width: $laptop-size) {
 		align-items: center;
 		max-width: 1660px;
 		padding: 20px 30px;
@@ -22,7 +22,7 @@
 			width: 100px;
 			margin-left: 30px;
 
-			@media screen and (min-width: 993px) {
+			@media screen and (min-width: $laptop-size) {
 				width: 149px;
 				margin-left: 0;
 			}
@@ -46,7 +46,7 @@
 		align-items: flex-start;
 		flex-direction: column;
 
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			position: static;
 			background: none;
 			width: auto;
@@ -71,29 +71,35 @@
 			text-transform: uppercase;
 			letter-spacing: 0.02em;
 			font-size: 1.3rem;
-			font-weight: 700;
+			font-weight: $weight-bold;
 			padding: 5vh 0;
 			transform: translateX(100px);
 			opacity: 0;
 			transition: 0.6s 0.5s ease;
 
-			@media screen and (min-width: 993px) {
+			@media screen and (min-width: $laptop-size) {
+				font-size: 1.2rem;
 				opacity: 1;
 				transform: none;
-				padding: 0 30px;
+				padding: 0 20px;
 				transition: 0.25s;
 
 				&:hover {
 					color: $iveos-green;
 				}
 			}
+			@media screen and (min-width: $site-size) {
+				font-size: 1.3rem;
+				padding: 0 25px;
+			}
 		}
 
 		li:last-child a {
-			@media screen and (min-width: 993px) {
+			@media screen and (min-width: $laptop-size) {
 				background-color: $iveos-green;
 				color: white;
-				padding: 20px 40px;
+				padding: 20px 50px;
+				margin-left: 25px;
 				border-radius: 50px;
 
 				&:hover {
@@ -115,7 +121,7 @@
 		z-index: 11;
 		transition: background 0.3s;
 
-		@media screen and (min-width: 993px) {
+		@media screen and (min-width: $laptop-size) {
 			display: none;
 		}
 
