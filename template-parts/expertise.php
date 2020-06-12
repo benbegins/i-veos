@@ -1,6 +1,6 @@
-<section class="expertise">
+<section class="expertise pad-bot">
 
-    <div class="wrap-contain txtcenter">
+    <div class="txtcenter expertise__wrap">
         <h2 class="expertise__title txtcenter upper-xbold">L'expertise i-veos</h2>
         <ul class="expertise__list">
             <li class="expertise__item txtcenter">
@@ -68,7 +68,7 @@
                 <p class="expertise__item-text txtcenter">i-veos est membre de la Fédération Nationale des Entreprises du Tiers Payant et obéit à une charte qualité très stricte qui protège les professionnels de santé</p>
             </li>
         </ul>
-        <a href="#" class="expertise__button btn-primary">Nous connaître</a>
+        <a href="<?php echo get_site_url() . '/a-propos'; ?>" class="expertise__button btn-primary">Nous connaître</a>
     </div>
     
 </section>

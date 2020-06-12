@@ -3,6 +3,10 @@ $tab-size: 769px;
 $laptop-size: 1025px;
 $site-size: 1660px;
 
+body.active {
+	overflow: hidden;
+}
+
 %shape-pattern-large {
 	content: "";
 	display: block;
@@ -40,6 +44,10 @@ $site-size: 1660px;
 	padding-right: 30px;
 	margin-left: auto;
 	margin-right: auto;
+	@media screen and (min-width: $laptop-size) {
+		padding-left: 60px;
+		padding-right: 60px;
+	}
 }
 
 .btn-primary {
@@ -61,6 +69,28 @@ $site-size: 1660px;
 
 	&:hover {
 		background-color: $iveos-green-2;
+		color: white;
+	}
+}
+.btn-primary-orange {
+	display: inline-block;
+	background-color: $iveos-orange;
+	color: white;
+	padding: 20px 40px;
+	text-transform: uppercase;
+	font-weight: $weight-bold;
+	font-size: 1.2rem;
+	border-radius: 50px;
+	box-shadow: 0 10px 20px rgba(2, 128, 144, 0.2);
+	transition: 0.2s;
+
+	@media screen and (min-width: $phone-size) {
+		font-size: 1.3rem;
+		padding: 20px 50px;
+	}
+
+	&:hover {
+		background-color: $iveos-green;
 		color: white;
 	}
 }
@@ -101,11 +131,14 @@ $site-size: 1660px;
 }
 
 .background-dark-pattern {
+	position: relative;
 	background: $iveos-dark url(./public/img/pattern.png) top left repeat fixed;
+	color: white;
 
 	&::after {
 		content: "";
 		position: absolute;
+		z-index: 0;
 		width: 100%;
 		height: 100%;
 		top: 0;
@@ -120,18 +153,46 @@ $site-size: 1660px;
 }
 
 .back-green-1 {
+	color: white;
 	background-color: $iveos-green;
 }
 .back-green-2 {
+	color: white;
 	background-color: $iveos-green-2;
 }
 .back-green-3 {
+	color: white;
 	background-color: $iveos-green-3;
+}
+.back-white {
+	background-color: white;
 }
 
 .upper-xbold {
 	text-transform: uppercase;
 	font-weight: $weight-xbold;
+}
+
+.title-50 {
+	font-size: 2.5rem;
+	line-height: 1.2;
+	@media screen and (min-width: $phone-size) {
+		font-size: 3.5rem;
+	}
+	@media screen and (min-width: $laptop-size) {
+		font-size: 5rem;
+	}
+}
+
+.text-courant {
+	font-size: 2.2rem;
+	font-weight: $weight-light;
+	@media screen and (min-width: $phone-size) {
+		font-size: 1.8rem;
+	}
+	@media screen and (min-width: $laptop-size) {
+		font-size: 2.2rem;
+	}
 }
 
 .vert-lines {
@@ -193,5 +254,44 @@ $site-size: 1660px;
 		width: 50%;
 		right: 0;
 		height: 35px;
+	}
+}
+
+.pad-bot {
+	padding-bottom: 10rem;
+	@media screen and (min-width: $phone-size) {
+		padding-bottom: 15rem;
+	}
+	@media screen and (min-width: $site-size) {
+		padding-bottom: 20rem;
+	}
+}
+
+.picto-services {
+	&__icon {
+		width: 138px;
+		height: 138px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__icon-gradient {
+		background: $iveos-green;
+		background: linear-gradient(
+			45deg,
+			rgba(2, 128, 144, 1) 0%,
+			rgba(2, 195, 154, 1) 100%
+		);
+		border-radius: 13px;
+	}
+	&__service {
+		text-transform: uppercase;
+		font-size: 1.5rem;
+		line-height: 1.3;
+		text-align: center;
+		@media screen and (min-width: $laptop-size) {
+			text-align: left;
+			width: 66%;
+		}
 	}
 }

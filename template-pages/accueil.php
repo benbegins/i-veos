@@ -19,8 +19,8 @@ get_template_part( 'template-parts/hero' );
             </div>
             <div class="services-iveos__text-container">
                 <p class="services-iveos__title-rappel">Gestion tiers payant</p>
-                <p class="services-iveos__text">Ne vous souciez plus des impayés, nous traitons vos rejets et assurons la gestion de votre tiers payant. Reposez vous sur l’expertise i-veos et concentrez-vous sur votre coeur de métier.</p>
-                <a href="#" class="text-link mtl">Découvrez notre offre</a> 
+                <p class="services-iveos__text text-courant">Ne vous souciez plus des impayés, nous traitons vos rejets et assurons la gestion de votre tiers payant. Reposez vous sur l’expertise i-veos et concentrez-vous sur votre coeur de métier.</p>
+                <a href="<?php echo get_site_url() . '/gestion-tiers-payant'; ?>" class="text-link mtl">Découvrez notre offre</a> 
             </div>
         </div>
         <div class="services-iveos__item services-iveos__item-conseil">
@@ -30,8 +30,8 @@ get_template_part( 'template-parts/hero' );
             </div>
             <div class="services-iveos__text-container">
                 <p class="services-iveos__title-rappel">Audit et conseil</p>
-                <p class="services-iveos__text">Nous vous accompagnons sur les étapes clés de votre activité et vous aidons à optimiser votre environnement informatique.</p>
-                <a href="#" class="text-link mtl">Découvrez notre offre</a> 
+                <p class="services-iveos__text text-courant">Nous vous accompagnons sur les étapes clés de votre activité et vous aidons à optimiser votre environnement informatique.</p>
+                <a href="<?php echo get_site_url() . '/conseil'; ?>" class="text-link mtl">Découvrez notre offre</a> 
             </div>
         </div>
         <div class="services-iveos__item services-iveos__item-informatique">
@@ -41,8 +41,8 @@ get_template_part( 'template-parts/hero' );
             </div>
             <div class="services-iveos__text-container">
                 <p class="services-iveos__title-rappel">Installation informatique</p>
-                <p class="services-iveos__text">Vous vous installez ou vous avez besoin d’une mise à jour ? Nous vous proposons des solutions économiques pour l’achat, l’installation et la maintenance de votre matériel informatique.</p>
-                <a href="#" class="text-link mtl">Découvrez notre offre</a> 
+                <p class="services-iveos__text text-courant">Vous vous installez ou vous avez besoin d’une mise à jour ? Nous vous proposons des solutions économiques pour l’achat, l’installation et la maintenance de votre matériel informatique.</p>
+                <a href="<?php echo get_site_url() . '/informatique'; ?>" class="text-link mtl">Découvrez notre offre</a> 
             </div>
         </div>
     </div>

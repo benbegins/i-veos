@@ -1,0 +1,94 @@
+.autres-services {
+	@media screen and (min-width: $phone-size) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+	}
+	&__link {
+		color: white;
+		display: block;
+		&:hover {
+			color: white;
+			.autres-services__decouvrez,
+			.autres-services__title {
+				transform: translateX(50px);
+			}
+		}
+	}
+	&__image {
+		width: 100%;
+		position: relative;
+		display: flex;
+		align-items: center;
+		&::after {
+			content: "";
+			background-color: black;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+			transition: opacity 0.3s;
+		}
+		&:hover::after {
+			opacity: 0.7;
+		}
+	}
+
+	&__image-conseil {
+		background: url(./public/img/footer-link-conseil-mobile.jpg) center center
+			no-repeat;
+		background-size: cover;
+		@media screen and (min-width: $laptop-size) {
+			background: url(./public/img/footer-link-conseil.jpg) center center
+				no-repeat;
+			background-size: cover;
+		}
+	}
+	&__image-informatique {
+		background: url(./public/img/footer-link-informatique-mobile.jpg) center
+			center no-repeat;
+		background-size: cover;
+		@media screen and (min-width: $laptop-size) {
+			background: url(./public/img/footer-link-informatique.jpg) center center
+				no-repeat;
+			background-size: cover;
+		}
+	}
+	&__image-tierspayant {
+		background: url(./public/img/footer-link-tierspayant-mobile.jpg) center
+			center no-repeat;
+		background-size: cover;
+		@media screen and (min-width: $laptop-size) {
+			background: url(./public/img/footer-link-tierspayant.jpg) center center
+				no-repeat;
+			background-size: cover;
+		}
+	}
+
+	&__text-container {
+		width: 100%;
+		padding: 25% 30px;
+		position: relative;
+		z-index: 1;
+		@media screen and (min-width: $laptop-size) {
+			padding: 23% 15% calc(23% + 50px);
+			transition: 0.4s cubic-bezier(0.6, 0, 0.4, 1);
+		}
+	}
+	&__decouvrez {
+		font-weight: $weight-bold;
+		text-transform: uppercase;
+		font-size: 1.3rem;
+		margin: 0;
+		@media screen and (min-width: $laptop-size) {
+			transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+	&__title {
+		margin: 0;
+		@media screen and (min-width: $laptop-size) {
+			transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+		}
+	}
+}

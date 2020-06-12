@@ -1,0 +1,46 @@
+.temoignage {
+	margin-bottom: 15rem;
+	&__wrap {
+		padding: 5rem 3rem;
+		border-radius: 20px;
+		@media screen and (min-width: $tab-size) {
+			width: 75%;
+			padding: 8rem 6rem;
+			margin: 0 auto;
+		}
+	}
+	&__title {
+		margin: 0;
+	}
+	&__content {
+		margin: 3rem 0 0;
+		font-weight: $weight-bold;
+		font-size: 1.6rem;
+		@media screen and (min-width: $phone-size) {
+			font-size: 1.8rem;
+		}
+		@media screen and (min-width: $tab-size) {
+			font-size: 2.2rem;
+			margin: 4rem 0 0;
+		}
+		@media screen and (min-width: $site-size) {
+			font-size: 2.5rem;
+		}
+	}
+	&__auteur {
+		margin: 3rem 0 0;
+		font-weight: $weight-bold;
+		font-size: 1.6rem;
+		@media screen and (min-width: $tab-size) {
+			font-size: 2rem;
+			margin: 4rem 0 0;
+		}
+	}
+	&__lieu {
+		font-size: 1.2rem;
+		margin: 0;
+		@media screen and (min-width: $tab-size) {
+			font-size: 1.6rem;
+		}
+	}
+}

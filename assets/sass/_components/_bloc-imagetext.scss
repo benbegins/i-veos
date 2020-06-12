@@ -1,0 +1,62 @@
+.bloc-imagetext {
+	@media screen and(min-width:$phone-size) {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 30px;
+	}
+	@media screen and(min-width:$laptop-size) {
+		grid-template-columns: repeat(12, 1fr);
+		align-items: center;
+	}
+
+	&__text-container {
+		margin-top: 9rem;
+		position: relative;
+		&::before {
+			@extend %shape-pattern-large;
+			right: -30px;
+			top: -30%;
+			@media screen and(min-width:$laptop-size) {
+				right: -30%;
+			}
+		}
+		@media screen and(min-width:$phone-size) {
+			margin-top: 0;
+			padding: 0 5rem;
+		}
+		@media screen and(min-width:$laptop-size) {
+			padding: 0;
+			grid-column: 7/10;
+		}
+	}
+
+	&__text {
+		margin: 0 0 3rem 0;
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	&__image-container {
+		position: relative;
+		@media screen and(min-width:$laptop-size) {
+			grid-column: 1/6;
+		}
+	}
+
+	&__image-container::before {
+		content: "";
+		display: block;
+		position: absolute;
+		z-index: 0;
+		background-color: $iveos-green-3;
+	}
+
+	&__image-container img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		position: relative;
+		z-index: 1;
+	}
+}

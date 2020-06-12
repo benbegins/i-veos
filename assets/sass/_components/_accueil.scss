@@ -77,14 +77,6 @@
 		}
 	}
 
-	&__text {
-		font-size: 1.8rem;
-		font-weight: $weight-light;
-		@media screen and (min-width: $tab-size) {
-			font-size: 2.2rem;
-		}
-	}
-
 	&__item-tierspayant {
 		.services-iveos__image-container::before {
 			content: "";

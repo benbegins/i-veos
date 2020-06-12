@@ -1,9 +1,6 @@
 .site-footer {
 	position: relative;
 	padding: 10rem 0 30px;
-	@media screen and (min-width: $tab-size) {
-		padding: 10rem 30px 30px;
-	}
 
 	&__colors {
 		background-color: $iveos-green;
