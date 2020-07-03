@@ -14,11 +14,11 @@
                 </div>
                 <div>
                     <h4 class="site-footer__coordonnees-title">Téléphone</h4>
-                    <p class="site-footer__coordonnees-content">01 47 33 81 44</p>
+                    <p class="site-footer__coordonnees-content"><a href="tel:0147338144" class="no-transition">01 47 33 81 44</a></p>
                     <h4 class="site-footer__coordonnees-title">Fax</h4>
                     <p class="site-footer__coordonnees-content">09 72 39 00 76</p>
                     <h4 class="site-footer__coordonnees-title">Email</h4>
-                    <p class="site-footer__coordonnees-content">contact@i-veos.fr</p>
+                    <p class="site-footer__coordonnees-content"><a class="no-transition" href="mailto:c%6f&#110;ta&#99;t&#64;%69%2dv%65o%73%2e%63&#111;&#109;">contact&#64;i-veos.com</a></p>
                 </div>        
             </div>
             <div class="site-footer__navigation site-footer__part">
@@ -35,7 +35,7 @@
             <div class="site-footer__social site-footer__part">
                 <ul class="site-footer__social-list">
                     <li>
-                        <a href="#" class="icon-linkedin icon-white icon-social">
+                        <a href="https://www.linkedin.com/company/i-veos" class="icon-linkedin icon-white icon-social no-transition" target="_blank">
                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 29.999">
                                 <g id="RS_linkedin" transform="translate(0 0)">
                                     <rect id="Rectangle_11" data-name="Rectangle 11" width="6.192" height="19.999" transform="translate(0.593 10)"/>
@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="site-footer__mentions wrap-contain">
-        <p class="txtcenter site-footer__mentions-text"><a href="<?php echo get_site_url() . '/mentions-legales' ?>">Mentions légales</a> - Membre de la FNETP <br>©2020 i-veos</p>
+        <p class="txtcenter site-footer__mentions-text"><a href="<?php echo get_site_url() . '/mentions-legales' ?>">Mentions légales</a> - Membre de la FNETP <br>©2020 i-veos - Design by <a href="https://bemy.studio" target="_blank" class="no-transition">Bemy Studio</a></p>
     </div>
     <div class="site-footer__background-right"></div>
 </footer>

@@ -68,7 +68,7 @@
                 <p class="expertise__item-text txtcenter">i-veos est membre de la Fédération Nationale des Entreprises du Tiers Payant et obéit à une charte qualité très stricte qui protège les professionnels de santé</p>
             </li>
         </ul>
-        <a href="<?php echo get_site_url() . '/a-propos'; ?>" class="expertise__button btn-primary">Nous connaître</a>
+        <a href="<?php echo get_site_url() . '/a-propos'; ?>" class="expertise__button btn-secondary">Nous connaître</a>
     </div>
     
 </section>

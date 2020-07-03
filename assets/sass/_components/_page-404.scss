@@ -1,0 +1,84 @@
+.hero-404 {
+	padding-top: 15rem;
+	@media screen and (min-width: $phone-size) {
+		padding-top: 11rem;
+	}
+	&__wrap {
+		@media screen and (min-width: $phone-size) {
+			position: relative;
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&__oups {
+		color: $iveos-green;
+		font-size: 8rem;
+		line-height: 1;
+		@media screen and (min-width: $phone-size) {
+			font-size: 10rem;
+		}
+		@media screen and (min-width: $laptop-size) {
+			font-size: 15rem;
+		}
+		@media screen and (min-width: $site-size) {
+			font-size: 20rem;
+		}
+	}
+	&__erreur {
+		font-size: 2rem;
+		line-height: 1;
+		position: relative;
+		left: 10px;
+		@media screen and (min-width: $laptop-size) {
+			font-size: 3rem;
+			left: 20px;
+		}
+	}
+	&__text-container {
+		@media screen and (min-width: $phone-size) {
+			position: absolute;
+			z-index: 2;
+			left: 15%;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+	}
+	&__image-container {
+		position: relative;
+		img {
+			position: relative;
+			z-index: 1;
+			width: 100%;
+		}
+		@media screen and (min-width: $phone-size) {
+			width: 60%;
+		}
+	}
+	&__bloc-1 {
+		background-color: #162c32;
+		height: 100%;
+		width: 100%;
+		right: -20px;
+		bottom: -20px;
+		@media screen and (min-width: $laptop-size) {
+			right: -35px;
+			bottom: -35px;
+		}
+	}
+}
+
+.main-404 {
+	@media screen and (min-width: $phone-size) {
+		position: relative;
+		padding-left: 10%;
+	}
+
+	&__text {
+		font-weight: $weight-bold;
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
+	}
+	.text-link {
+		margin-top: 2rem;
+	}
+}

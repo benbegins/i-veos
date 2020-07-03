@@ -6,8 +6,7 @@
 	@media screen and (min-width: $site-size) {
 		padding: 15rem 0 20rem 0;
 	}
-
-	.bloc-imagetext__image-container::before {
+	&__bloc-1 {
 		width: 200%;
 		height: 90%;
 		bottom: -30px;
@@ -70,7 +69,7 @@
 			margin-bottom: 8rem;
 			&:last-child {
 				grid-column-end: span 2;
-				.tierspayant-services__service {
+				.picto-services__service {
 					width: 100%;
 				}
 			}

@@ -3,6 +3,10 @@ $tab-size: 769px;
 $laptop-size: 1025px;
 $site-size: 1660px;
 
+.site {
+	overflow-x: hidden;
+}
+
 body.active {
 	overflow: hidden;
 }
@@ -11,7 +15,7 @@ body.active {
 	content: "";
 	display: block;
 	position: absolute;
-	z-index: 1;
+	z-index: 0;
 	background: url(./public/img/shape-pattern-large.svg) center center no-repeat;
 	width: 335px;
 	height: 430px;
@@ -26,7 +30,7 @@ body.active {
 	content: "";
 	display: block;
 	position: absolute;
-	z-index: 1;
+	z-index: 0;
 	background: url(./public/img/shape-pattern-small.svg) center center no-repeat;
 	width: 115px;
 	height: 145px;
@@ -47,86 +51,6 @@ body.active {
 	@media screen and (min-width: $laptop-size) {
 		padding-left: 60px;
 		padding-right: 60px;
-	}
-}
-
-.btn-primary {
-	display: inline-block;
-	background-color: $iveos-green;
-	color: white;
-	padding: 20px 40px;
-	text-transform: uppercase;
-	font-weight: $weight-bold;
-	font-size: 1.2rem;
-	border-radius: 50px;
-	box-shadow: 0 10px 20px rgba(2, 128, 144, 0.2);
-	transition: 0.2s;
-
-	@media screen and (min-width: $phone-size) {
-		font-size: 1.3rem;
-		padding: 20px 50px;
-	}
-
-	&:hover {
-		background-color: $iveos-green-2;
-		color: white;
-	}
-}
-.btn-primary-orange {
-	display: inline-block;
-	background-color: $iveos-orange;
-	color: white;
-	padding: 20px 40px;
-	text-transform: uppercase;
-	font-weight: $weight-bold;
-	font-size: 1.2rem;
-	border-radius: 50px;
-	box-shadow: 0 10px 20px rgba(2, 128, 144, 0.2);
-	transition: 0.2s;
-
-	@media screen and (min-width: $phone-size) {
-		font-size: 1.3rem;
-		padding: 20px 50px;
-	}
-
-	&:hover {
-		background-color: $iveos-green;
-		color: white;
-	}
-}
-
-.btn-secondary {
-	display: inline-block;
-	border: 1px solid white;
-	color: white;
-	padding: 20px 40px;
-	text-transform: uppercase;
-	font-weight: $weight-bold;
-	font-size: 1.2rem;
-	border-radius: 50px;
-	transition: 0.2s;
-
-	@media screen and (min-width: $phone-size) {
-		font-size: 1.3rem;
-		padding: 20px 50px;
-	}
-
-	&:hover {
-		background-color: $iveos-green-2;
-		color: white;
-	}
-}
-
-.text-link {
-	color: $iveos-orange;
-	display: inline-block;
-	border-bottom: 3px solid $iveos-orange;
-	font-size: 1.2rem;
-	text-transform: uppercase;
-	font-weight: $weight-bold;
-
-	@media screen and (min-width: $tab-size) {
-		font-size: 1.4rem;
 	}
 }
 
@@ -167,6 +91,10 @@ body.active {
 .back-white {
 	background-color: white;
 }
+.back-dark {
+	background-color: $iveos-dark;
+	color: white;
+}
 
 .upper-xbold {
 	text-transform: uppercase;
@@ -195,9 +123,19 @@ body.active {
 	}
 }
 
+.text-25 {
+	font-size: 1.8rem;
+	@media screen and (min-width: $laptop-size) {
+		font-size: 2.2rem;
+	}
+	@media screen and (min-width: $site-size) {
+		font-size: 2.5rem;
+	}
+}
+
 .vert-lines {
 	position: fixed;
-	z-index: -1;
+	z-index: -10;
 	width: calc(100% - 60px);
 	height: 100%;
 	top: 0;
@@ -294,4 +232,9 @@ body.active {
 			width: 66%;
 		}
 	}
+}
+
+.bloc-couleur {
+	position: absolute;
+	z-index: 0;
 }

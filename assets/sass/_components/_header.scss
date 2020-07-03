@@ -1,31 +1,76 @@
 .site-header {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-end;
 	position: absolute;
 	z-index: 10;
 	width: 100%;
 
 	@media screen and (min-width: $laptop-size) {
-		align-items: center;
-		max-width: 1660px;
-		padding: 20px 30px;
-		left: 50%;
-		transform: translateX(-50%);
+		position: fixed;
+		transition: 0.5s;
+		&.sticky {
+			position: fixed;
+			z-index: 10;
+			background-color: white;
+			color: $iveos-dark;
+			//box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+			a {
+				color: $iveos-dark;
+				&:hover {
+					color: $iveos-dark;
+				}
+			}
+			li:last-child a:hover {
+				color: white;
+			}
+			.site-header__logo {
+				width: 115px;
+				height: 54px;
+				background: url(./public/img/logo-iveos-dark.png) center center
+					no-repeat;
+				background-size: contain;
+			}
+			.site-header__container {
+				padding: 10px 30px;
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-end;
+		width: 100%;
+
+		@media screen and (min-width: $laptop-size) {
+			align-items: center;
+			max-width: 1660px;
+			margin: 0 auto;
+			padding: 20px 30px;
+		}
+	}
+
+	&__logo-container {
+		position: relative;
+		z-index: 11;
 	}
 
 	&__logo {
-		position: relative;
-		z-index: 11;
+		display: block;
+		width: 100px;
+		height: 47px;
+		margin-left: 30px;
+		background: url(./public/img/logo-iveos.png) center center no-repeat;
+		background-size: contain;
+		//transition: 0s;
 
-		img {
-			width: 100px;
-			margin-left: 30px;
+		&.logo-dark {
+			background: url(./public/img/logo-iveos-dark.png) center center no-repeat;
+			background-size: contain;
+		}
 
-			@media screen and (min-width: $laptop-size) {
-				width: 149px;
-				margin-left: 0;
-			}
+		@media screen and (min-width: $laptop-size) {
+			width: 149px;
+			height: 70px;
+			margin-left: 0;
 		}
 	}
 
@@ -79,18 +124,39 @@
 
 			@media screen and (min-width: $laptop-size) {
 				font-size: 1.2rem;
+				line-height: 1.4;
+				position: relative;
 				opacity: 1;
 				transform: none;
-				padding: 0 20px;
+				padding: 0;
+				margin: 0 20px;
 				transition: 0.25s;
 
+				&::after {
+					content: "";
+					background-color: $iveos-green;
+					width: 100%;
+					height: 10px;
+					position: absolute;
+					top: 55%;
+					left: 0;
+					z-index: -1;
+					opacity: 0.5;
+					transition: 0.35s cubic-bezier(0.7, 0, 0.3, 1);
+					transform: scaleX(0);
+					transform-origin: center left;
+				}
+
 				&:hover {
-					color: $iveos-green;
+					color: white;
+					&::after {
+						transform: scaleX(1);
+					}
 				}
 			}
 			@media screen and (min-width: $site-size) {
 				font-size: 1.3rem;
-				padding: 0 25px;
+				margin: 0 25px;
 			}
 		}
 
@@ -98,14 +164,43 @@
 			@media screen and (min-width: $laptop-size) {
 				background-color: $iveos-green;
 				color: white;
-				padding: 20px 50px;
-				margin-left: 25px;
+				padding: 0 50px;
+				line-height: 4.5;
+				margin: 0 0 0 25px;
 				border-radius: 50px;
+				position: relative;
+				z-index: 1;
+				cursor: pointer;
+				overflow: hidden;
+				-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+
+				&::before {
+					content: "";
+					background: $iveos-green-2;
+					position: absolute;
+					width: 110%;
+					height: 110%;
+					top: -5%;
+					left: -110%;
+					z-index: -1;
+					border-radius: 50px;
+					transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+				}
+
+				&::after {
+					display: none;
+				}
 
 				&:hover {
-					background-color: $iveos-green-2;
+					&::before {
+						transform: translateX(100%);
+					}
 				}
 			}
+		}
+
+		.current_page_item a::after {
+			transform: scaleX(1);
 		}
 	}
 
@@ -151,6 +246,22 @@
 			.line3 {
 				transform: scaleX(0);
 			}
+		}
+	}
+}
+
+.site-header.header-dark {
+	a {
+		@media screen and (min-width: $laptop-size) {
+			color: $iveos-dark;
+			&:hover {
+				color: $iveos-dark;
+			}
+		}
+	}
+	li:last-child a {
+		@media screen and (min-width: $laptop-size) {
+			color: white;
 		}
 	}
 }

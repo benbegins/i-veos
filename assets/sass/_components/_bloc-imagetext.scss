@@ -44,13 +44,13 @@
 		}
 	}
 
-	&__image-container::before {
-		content: "";
-		display: block;
-		position: absolute;
-		z-index: 0;
-		background-color: $iveos-green-3;
-	}
+	// &__image-container::before {
+	// 	content: "";
+	// 	display: block;
+	// 	position: absolute;
+	// 	z-index: 0;
+	// 	background-color: $iveos-green-3;
+	// }
 
 	&__image-container img {
 		width: 100%;

@@ -63,6 +63,13 @@
 			font-size: 2.2rem;
 			margin-bottom: 40px;
 		}
+
+		a {
+			color: white;
+			&:hover {
+				color: white;
+			}
+		}
 	}
 
 	&__navigation {
@@ -73,14 +80,31 @@
 			text-transform: uppercase;
 			color: white;
 			padding: 15px 0;
-
+			position: relative;
 			@media screen and (min-width: $laptop-size) {
 				font-size: 1.3rem;
 				padding: 20px 0;
 			}
+			&::before {
+				content: "";
+				background: white;
+				height: 10px;
+				width: 100%;
+				position: absolute;
+				left: 0;
+				bottom: 19px;
+				z-index: 0;
+				opacity: 0.5;
+				transform: scaleX(0);
+				transform-origin: center left;
+				transition: 0.35s cubic-bezier(0.4, 0, 0, 1);
+			}
 		}
 		a:hover {
-			color: $iveos-dark;
+			color: white;
+			&::before {
+				transform: scaleX(1);
+			}
 		}
 	}
 
@@ -109,10 +133,10 @@
 	&__mentions-text {
 		font-size: 1.2rem;
 		font-weight: $weight-bold;
-		opacity: 0.5;
+		color: #81e1cd;
 
 		a {
-			color: white;
+			color: #81e1cd;
 		}
 		a:hover {
 			color: $iveos-dark;
@@ -139,6 +163,7 @@
 			content: "";
 			display: block;
 			position: absolute;
+			z-index: 1;
 			background-color: $iveos-green;
 			height: 50px;
 			left: 0;

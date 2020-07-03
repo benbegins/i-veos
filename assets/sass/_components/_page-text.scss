@@ -1,0 +1,32 @@
+.page-text {
+	a {
+		color: $iveos-dark;
+		text-decoration: underline;
+		&:hover {
+			color: $iveos-green;
+		}
+	}
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-weight: 800;
+		margin: 3rem 0 1rem;
+		text-transform: uppercase;
+	}
+
+	h2 {
+		font-size: 3rem;
+	}
+	h3 {
+		font-size: 2.6rem;
+	}
+	h4 {
+		font-size: 2.2rem;
+	}
+	h5,
+	h6 {
+		font-size: 1.8rem;
+	}
+}

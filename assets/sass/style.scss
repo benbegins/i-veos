@@ -58,7 +58,15 @@ Version: 1.0
 @import "_components/bloc-imagetext";
 @import "_components/temoignage";
 @import "_components/autres-services";
+@import "_components/form";
+@import "_components/buttons";
+@import "_components/loader";
 //Pages
-@import "_components/accueil";
+@import "_components/page-accueil";
 @import "_components/page-tierspayant";
 @import "_components/page-conseil";
+@import "_components/page-informatique";
+@import "_components/page-a-propos";
+@import "_components/page-contact";
+@import "_components/page-text";
+@import "_components/page-404";

@@ -6,13 +6,31 @@ Template Post Type: page
 
 get_header();
 
-get_template_part( 'template-parts/hero' );
 ?>
 
+<section class="site-hero">
+    
+    <div class="site-hero__background background-dark-pattern"></div>
+
+    <div class="site-hero__image-container">
+        <?php the_post_thumbnail( 'fullwidth-size', array( 'sizes' => '(max-width:480px) 450px, (max-width:992px) 800px, 1500px', 'class' => 'site-hero__image')  ); ?>
+        <div class="site-hero__image-overlay"></div>
+        <div class="site-hero__image-reveal"></div>
+        <div class="bloc-couleur back-green-1 bloc-1"></div>
+    </div>
+    <div class="site-hero__gradient-overlay"></div> 
+
+    <div class="site-hero__title-container wrap-contain">
+        <h1 class="site-hero__title">Gestion tiers payant</h1>
+    </div>
+    
+</section>
+
 <section class="tierspayant-intro back-white">
-    <div class="wrap-contain">
+    <div class="wrap-contain first-content">
         <div class="bloc-imagetext">
             <div class="bloc-imagetext__image-container">
+                <div class="tierspayant-intro__bloc-1 bloc-couleur back-green-3"></div>
                 <img src="<?php echo get_template_directory_uri() . '/public/img/tierspayant-intro.jpg' ?>" alt="i-veos gestion tiers payant">
             </div>
             <div class="bloc-imagetext__text-container">
@@ -192,32 +210,51 @@ i-veos et concentrez-vous sur votre coeur de métier.</p>
 <?php 
 get_template_part( 'template-parts/expertise' ); 
 
-get_template_part( 'template-parts/temoignage' ); 
+
+//Temoignage
+$temoignage = get_field('temoignage');
+// override $post
+$post = $temoignage;
+setup_postdata( $post );
+
+if($post):
+
+?>
+    <section class="temoignage">
+        <div class="wrap-contain">
+            <div class="temoignage__wrap back-green-3 txtcenter">
+                <p class="temoignage__title upper-xbold title-50">Témoignage</p>
+                <p class="temoignage__content"><?php the_field('temoignage'); ?></p>
+                <p class="temoignage__auteur"><?php the_field('auteur'); ?></p>
+                <p class="temoignage__lieu"><?php the_field('societe'); ?></p>
+            </div>
+        </div>
+    </section>
+<?php
+endif;
+// Restore original Post Data
+wp_reset_postdata();
 
 get_template_part( 'template-parts/se-faire-rappeler' );
 ?>
 
 <section class="autres-services">
-    <div class="autres-services__first">
-        <a href="<?php echo get_site_url() . '/conseil'; ?>" class="autres-services__link">
-            <div class="autres-services__image autres-services__image-conseil">
-                <div class="autres-services__text-container">
-                    <p class="autres-services__decouvrez">Découvrez notre offre</p>
-                    <h2 class="autres-services__title upper-xbold title-50">Conseil</h2>
-                </div>
+    <a href="<?php echo get_site_url() . '/conseil'; ?>" class="autres-services__first autres-services__item autres-services__link">
+        <div class="autres-services__image autres-services__image-conseil">
+            <div class="autres-services__text-container">
+                <p class="autres-services__decouvrez">Découvrez notre offre</p>
+                <h2 class="autres-services__title upper-xbold title-50">Conseil</h2>
             </div>
-        </a>
-    </div>
-    <div class="autres-services__second">
-        <a href="<?php echo get_site_url() . '/informatique'; ?>" class="autres-services__link">
-            <div class="autres-services__image autres-services__image-informatique">
-                <div class="autres-services__text-container">
-                    <p class="autres-services__decouvrez">Découvrez notre offre</p>
-                    <h2 class="autres-services__title upper-xbold title-50">Informatique</h2>
-                </div>
+        </div>
+    </a>
+    <a href="<?php echo get_site_url() . '/informatique'; ?>" class="autres-services__second autres-services__item autres-services__link">
+        <div class="autres-services__image autres-services__image-informatique">
+            <div class="autres-services__text-container">
+                <p class="autres-services__decouvrez">Découvrez notre offre</p>
+                <h2 class="autres-services__title upper-xbold title-50">Informatique</h2>
             </div>
-        </a>
-    </div>
+        </div>
+    </a>
 </section>
 
 <?php

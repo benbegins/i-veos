@@ -1,4 +1,6 @@
 .autres-services {
+	position: relative;
+	z-index: 1;
 	@media screen and (min-width: $phone-size) {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -8,10 +10,6 @@
 		display: block;
 		&:hover {
 			color: white;
-			.autres-services__decouvrez,
-			.autres-services__title {
-				transform: translateX(50px);
-			}
 		}
 	}
 	&__image {
@@ -19,6 +17,7 @@
 		position: relative;
 		display: flex;
 		align-items: center;
+		pointer-events: none;
 		&::after {
 			content: "";
 			background-color: black;
@@ -27,11 +26,11 @@
 			height: 100%;
 			top: 0;
 			left: 0;
-			opacity: 0.3;
+			opacity: 0.1;
 			transition: opacity 0.3s;
 		}
 		&:hover::after {
-			opacity: 0.7;
+			opacity: 0.3;
 		}
 	}
 
@@ -73,7 +72,6 @@
 		z-index: 1;
 		@media screen and (min-width: $laptop-size) {
 			padding: 23% 15% calc(23% + 50px);
-			transition: 0.4s cubic-bezier(0.6, 0, 0.4, 1);
 		}
 	}
 	&__decouvrez {
@@ -81,14 +79,35 @@
 		text-transform: uppercase;
 		font-size: 1.3rem;
 		margin: 0;
-		@media screen and (min-width: $laptop-size) {
-			transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
-		}
 	}
 	&__title {
 		margin: 0;
+	}
+	&__item {
 		@media screen and (min-width: $laptop-size) {
-			transition: 0.4s cubic-bezier(0.7, 0, 0.3, 1);
+			position: relative;
+			&::after {
+				content: "";
+				width: 38px;
+				height: 72px;
+				background: url(./public/img/arrow-right.svg) center center no-repeat;
+				background-size: 38px 72px;
+				position: absolute;
+				top: calc(50% - 60px);
+				right: calc(10% + 30px);
+				transition: 0.25s ease-in-out;
+				opacity: 0;
+			}
+			&:hover::after {
+				opacity: 1;
+				transform: translateX(30px);
+			}
+
+			&:hover {
+				.autres-services__image::after {
+					opacity: 0.3;
+				}
+			}
 		}
 	}
 }

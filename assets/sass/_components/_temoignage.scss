@@ -1,10 +1,13 @@
 .temoignage {
 	margin-bottom: 15rem;
+	position: relative;
+	z-index: 1;
 	&__wrap {
 		padding: 5rem 3rem;
 		border-radius: 20px;
+		box-shadow: 0 10px 30px rgba(22, 44, 50, 0.2);
 		@media screen and (min-width: $tab-size) {
-			width: 75%;
+			width: 70%;
 			padding: 8rem 6rem;
 			margin: 0 auto;
 		}
@@ -14,8 +17,9 @@
 	}
 	&__content {
 		margin: 3rem 0 0;
-		font-weight: $weight-bold;
+		font-weight: $weight-light;
 		font-size: 1.6rem;
+		line-height: 1.6;
 		@media screen and (min-width: $phone-size) {
 			font-size: 1.8rem;
 		}
@@ -24,7 +28,7 @@
 			margin: 4rem 0 0;
 		}
 		@media screen and (min-width: $site-size) {
-			font-size: 2.5rem;
+			//font-size: 2.5rem;
 		}
 	}
 	&__auteur {
