@@ -33,6 +33,7 @@ input[type="submit"] {
 	transition: 0.25s;
 	cursor: pointer;
 	overflow: hidden;
+	margin-top: 20px;
 
 	&::before {
 		content: "";
