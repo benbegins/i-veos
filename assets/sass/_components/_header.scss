@@ -78,13 +78,14 @@
 		position: fixed;
 		background-color: $iveos-green;
 		z-index: 10;
-		width: 100%;
+		width: 100vw;
 		height: 100vh;
-		left: 100%;
+		left: 0;
 		top: 0;
+		transform: translateY(-100%);
 		padding: 65px 0 0 20%;
 		margin: 0;
-		transition: transform 0.8s cubic-bezier(0.7, 0, 0.3, 1);
+		transition: transform 0.7s cubic-bezier(0.7, 0, 0.3, 1);
 
 		display: flex;
 		justify-content: center;
@@ -92,6 +93,7 @@
 		flex-direction: column;
 
 		@media screen and (min-width: $laptop-size) {
+			transform: translateY(0);
 			position: static;
 			background: none;
 			width: auto;
@@ -102,10 +104,10 @@
 		}
 
 		&.active {
-			transform: translateX(-100%);
+			transform: translateY(0);
 
 			a {
-				transform: translateX(0);
+				transform: translateY(0);
 				opacity: 1;
 			}
 		}
@@ -118,7 +120,7 @@
 			font-size: 1.3rem;
 			font-weight: $weight-bold;
 			padding: 5vh 0;
-			transform: translateX(100px);
+			transform: translateY(-100px);
 			opacity: 0;
 			transition: 0.6s 0.5s ease;
 
