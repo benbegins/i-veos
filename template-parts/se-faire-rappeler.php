@@ -12,7 +12,10 @@
     <div class="rappeler-form__wrap">
         <h2 class="rappeler-form__title upper-xbold">Une question, un devis&nbsp;? Faites-vous rappeler.</h2>
         <div class="rappeler-form__container">
-            <?php echo do_shortcode('[contact-form-7 id="122" title="Se faire rappeler"]'); ?>
+            <?php 
+            $formulaire = get_field("formulaire_rappel", "option");
+            echo do_shortcode($formulaire); 
+            ?>
         </div>
     </div>
 </div>

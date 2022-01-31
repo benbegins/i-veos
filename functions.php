@@ -79,6 +79,11 @@ require get_template_directory() . '/inc/template-functions.php';
 //Desactive Gutenberg
 add_filter('use_block_editor_for_post', '__return_false');
 
+// Create option page
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
 // Register Temoignage Post Type
 function temoignage_post_type() {
 

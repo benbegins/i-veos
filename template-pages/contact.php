@@ -49,7 +49,10 @@ get_header("dark");
         </div>
         <div class="contact-form__form-container">
             <h2 class="contact-form__title upper-xbold">Une question, un devis&nbsp;? Entamons la conversation.</h2>
-            <?php echo do_shortcode('[contact-form-7 id="64" title="Contact"]'); ?>
+            <?php 
+            $formulaire = get_field('formulaire_de_contact');
+            echo do_shortcode($formulaire); 
+            ?>
             <div class="contact-form__rappeler">
                 <h3 class="contact-form__rappeler-title">Vous préférez vous faire rappeler ?</h3>
                 <button class="btn-primary mtm btn-rappeler">Faites-vous rappeler</button>
@@ -63,7 +66,10 @@ get_header("dark");
     <div class="rappeler-form__wrap">
         <h2 class="rappeler-form__title upper-xbold">Une question, un devis&nbsp;? Faites-vous rappeler.</h2>
         <div class="rappeler-form__container">
-            <?php echo do_shortcode('[contact-form-7 id="122" title="Se faire rappeler"]'); ?>
+        <?php 
+            $formulaire = get_field("formulaire_rappel", "option");
+            echo do_shortcode($formulaire); 
+            ?>
         </div>
     </div>
 </div>
