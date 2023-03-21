@@ -50,7 +50,7 @@
         </div>
     </div>
     <div class="site-footer__mentions wrap-contain">
-        <p class="txtcenter site-footer__mentions-text"><a href="<?php echo get_site_url() . '/mentions-legales' ?>">Mentions légales</a> - Membre de la FNETP <br>©2020 i-veos - Design by <a href="https://bemy.studio" target="_blank" class="no-transition">Bemy Studio</a></p>
+        <p class="txtcenter site-footer__mentions-text"><a href="<?php echo get_site_url() . '/mentions-legales' ?>">Mentions légales</a> - Membre de la FNETP <br>©<?php echo date('Y'); ?> i-veos - Design by <a href="https://bemy.studio" target="_blank" class="no-transition">Bemy Studio</a></p>
     </div>
     <div class="site-footer__background-right"></div>
 </footer>
