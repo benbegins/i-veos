@@ -22,7 +22,11 @@ get_header("dark");
                 <p class="apropos-chiffres__text">Fondée en 2007, la société i-veos peut compter sur son ancienneté pour vous offrir une expertise affutée de la gestion du tiers payant.</p>
             </li>
             <li class="apropos-chiffres__item">
-                <p class="apropos-chiffres__number upper-xbold">13 ans</p>
+                <?php 
+                $birthdate = 2007;
+                $date = date('Y') - $birthdate;
+                ?>
+                <p class="apropos-chiffres__number upper-xbold"><?php echo $date; ?> ans</p>
                 <div class="apropos-chiffres__bloc-gris"></div>
                 <p class="apropos-chiffres__text">C’est la durée de la relation avec notre plus ancien client. L’ancienneté de nos clients est de 10 ans en moyenne avec de nouveaux clients recommandés par nos anciens a plus de 80%.</p>
             </li>
