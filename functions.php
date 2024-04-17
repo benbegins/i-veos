@@ -184,3 +184,19 @@ add_action( 'init', 'temoignage_taxonomy', 0 );
 //Remove Jetpack CSS
 add_filter( 'jetpack_sharing_counts', '__return_false', 99 );
 add_filter( 'jetpack_implode_frontend_css', '__return_false', 99 );
+
+// Add Google Analytics script
+function add_google_analytics() {
+	if ( !is_user_logged_in() ) { ?>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-SSPP2090FR"></script>
+		<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-SSPP2090FR');
+		</script>
+	<?php }
+}
+add_action('wp_head', 'add_google_analytics');
