@@ -67,12 +67,5 @@
 
 <?php wp_footer(); ?>
 
-<script>
-  window._xenoSettings = {
-    key: "xpk-92fb2de4-08d1-477d-841b-c69c816cc7fb",
-  };
-</script>
-<script src="https://cdn.xeno.app/chat_loader.js" async="true"></script>
-
 </body>
 </html>
